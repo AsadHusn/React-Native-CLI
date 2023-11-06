@@ -1,0 +1,16 @@
+
+==> Update the android/app/build.gradle
+apply plugin: 'com.google.gms.google-services'
+
+==> generate keystore file
+keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -storepass android -keypass android -keyalg RSA -validity 10000
+
+==> clean the gradle build
+gradlew clean
+
+==>  see debug.keystore SHA-1 hash code
+keytool -keystore debug.keystore -list -v
+
+
+==> make release build
+gradlew assembleRelease
