@@ -1,0 +1,6 @@
+npx react-native start --reset-cache
+
+
+npm cache clean --force
+
+npm cache clean package-name --force
